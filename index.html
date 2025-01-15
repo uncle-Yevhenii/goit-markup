@@ -20,9 +20,8 @@
     <title>WebStudio</title>
   </head>
   <body>
+    <!-- -------------------------------header-section------------------------------- -->
     <header class="header">
-      <!-- -------------------------------header-section------------------------------- -->
-
       <div class="container header-container">
         <nav class="header-nav">
           <a href="./index.html" class="logo link"
@@ -66,12 +65,28 @@
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle hamburger header-menu js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mobile-menu-icon"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="32" height="4" y="6" fill="#000"></rect>
+            <rect width="32" height="4" y="14" fill="#000"></rect>
+            <rect width="32" height="4" y="22" fill="#000"></rect>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main class="main-block">
       <!-- -------------------------------herro-section------------------------------- -->
-
       <section class="herro">
         <div class="container herro-container">
           <h1 class="herro-title h-one-text">
@@ -87,7 +102,6 @@
         </div>
       </section>
       <!-- -------------------------------benefits-section------------------------------- -->
-
       <section class="benefits-section">
         <div class="container">
           <h2 class="visually-hidden benefits-title h-two-text">Benefits</h2>
@@ -144,7 +158,6 @@
         </div>
       </section>
       <!-- -------------------------------product-section------------------------------- -->
-
       <section class="product-section">
         <div class="container">
           <h2 class="product-section-title h-two-text">What are we doing</h2>
@@ -152,32 +165,46 @@
             <li class="product-section-items">
               <img
                 class="product-section-img"
-                src="./images/product/product1.jpg"
+                srcset="
+                  ./images/product/1_product@1x.jpg 1x,
+                  ./images/product/1_product@2x.jpg 2x
+                "
+                src="./images/product/1_product@1x.jpg"
                 alt="computer app"
                 width="360"
+                loading="lazy"
               />
             </li>
             <li class="product-section-items">
               <img
                 class="product-section-img"
-                src="./images/product/product2.jpg"
+                srcset="
+                  ./images/product/2_product@1x.jpg 1x,
+                  ./images/product/2_product@2x.jpg 2x
+                "
+                src="./images/product/2_product@1x.jpg"
                 alt="mobille app"
                 width="360"
+                loading="lazy"
               />
             </li>
             <li class="product-section-items">
               <img
                 class="product-section-img"
-                src="./images/product/product3.jpg"
+                srcset="
+                  ./images/product/3_product@1x.jpg 1x,
+                  ./images/product/3_product@2x.jpg 2x
+                "
+                src="./images/product/3_product@1x.jpg"
                 alt="mobille app"
                 width="360"
+                loading="lazy"
               />
             </li>
           </ul>
         </div>
       </section>
       <!-- -------------------------------team-section------------------------------- -->
-
       <section class="team-section">
         <div class="container">
           <h2 class="team-title h-two-text">Our Team</h2>
@@ -185,7 +212,11 @@
             <li class="team-list-item">
               <img
                 class="team-list-img"
-                src="./images/team/our-team1.jpg"
+                srcset="
+                  ./images/team/1our-team@1x.jpg 1x,
+                  ./images/team/1our-team@2x.jpg 2x
+                "
+                src="./images/team/1our-team@1x.jpg"
                 alt="team member (male)"
                 width="264"
               />
@@ -227,7 +258,11 @@
             <li class="team-list-item">
               <img
                 class="team-list-img"
-                src="./images/team/our-team2.jpg"
+                srcset="
+                  ./images/team/2our-team@1x.jpg 1x,
+                  ./images/team/2our-team@2x.jpg 2x
+                "
+                src="./images/team/2our-team@1x.jpg"
                 alt="team member (male)"
                 width="264"
               />
@@ -269,7 +304,11 @@
             <li class="team-list-item">
               <img
                 class="team-list-img"
-                src="./images/team/our-team3.jpg"
+                srcset="
+                  ./images/team/3our-team@1x.jpg 1x,
+                  ./images/team/3our-team@2x.jpg 2x
+                "
+                src="./images/team/1our-team@3x.jpg"
                 alt="team member (female)"
                 width="264"
               />
@@ -311,7 +350,11 @@
             <li class="team-list-item">
               <img
                 class="team-list-img"
-                src="./images/team/our-team4.jpg"
+                srcset="
+                  ./images/team/4our-team@1x.jpg 1x,
+                  ./images/team/4our-team@2x.jpg 2x
+                "
+                src="./images/team/4our-team@1x.jpg"
                 alt="team member (male)"
                 width="264"
               />
@@ -354,7 +397,6 @@
         </div>
       </section>
       <!-- -------------------------------customers-section------------------------------- -->
-
       <section class="customers">
         <div class="container">
           <h2 class="customers-title h-two-text">Customers</h2>
@@ -405,9 +447,9 @@
         </div>
       </section>
     </main>
+    <!-- -------------------------------footer-section------------------------------- -->
     <footer class="footer">
-      <!-- -------------------------------footer-section------------------------------- -->
-      <div class="container footer-box footer-logo-text">
+      <div class="container footer-box">
         <div class="footer-logo-text">
           <a href="./index.html" class="logo footer-logo link"
             >Web<span class="logo-light">Studio</span>
@@ -579,6 +621,82 @@
         </form>
       </div>
     </div>
+    <!-- mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle modal-menu js-close-menu">
+        <svg class="mobile-menu-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="mobile-menu-link current link"
+            >Studio</a
+          >
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="mobile-menu-link link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="" class="mobile-menu-link link">Contacts</a>
+        </li>
+      </ul>
+
+      <div class="mobile-adress-sosial">
+        <address class="mobile-address">
+          <ul class="mobile-address-list list">
+            <li class="mobile-list-item">
+              <a href="tel:+110001111111" class="mobile-list-content link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-list-item">
+              <a href="mailto:info@devstudio.com" class="link-list-content link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="mobile-social-list list">
+          <li class="mobile-social-item">
+            <a href="" class="mobile-social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="" class="mobile-social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="" class="mobile-social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a href="" class="mobile-social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
